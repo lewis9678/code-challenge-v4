@@ -11,6 +11,8 @@ import {
   useColorModeValue,
   useTheme,
 } from "@interchain-ui/react";
+import { Provider } from "react-redux";
+import { store } from "../store";
 
 function CreateCosmosApp({ Component, pageProps }: AppProps) {
   const { themeClass } = useTheme();
@@ -47,7 +49,9 @@ function CreateCosmosApp({ Component, pageProps }: AppProps) {
           minHeight="100dvh"
           backgroundColor={useColorModeValue("$white", "$background")}
         >
-          <Component {...pageProps} />
+          <Provider store={store}>
+            <Component {...pageProps} />
+          </Provider>
         </Box>
       </ChainProvider>
     </ThemeProvider>
