@@ -6,7 +6,7 @@ pnpm install
 
 pnpm dev
 
-Challenge page is on [localhost:3000]()
+**Add Asset Page** is on [localhost:3000]()
 
 ## Brief
 
